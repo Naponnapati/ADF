@@ -1,0 +1,19 @@
+{
+	"name": "Binary3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "prd-raw-bge-oracleccb-ci-pay-tndr+0+0024862085+0024862086.avro",
+				"container": "jiteshrepro"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "DelimitedText9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "77ff86b2-baf4-1183-4d6e-8994b5d1f541.csv",
+				"container": "dataflow"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "\"Alarm durch defekte Tür\",\"\",False,\"\",\"4511504697\",True,9/22/2021 3:20:08 PM,\"\",\"Caller Name: xxxxxxxxx  Caller Phone: xxxxxxxxxx Caller E-mail: \",\"\",\"account\",\"000300891224\",\"000300891224_MP1-100\",2,100000000,3f37841a-50cc-4ec1-a80e-6d3896f2ad95,4fadd60e-77ef-e911-a812-000d3a2d5a33,100000004,30,1/2/2014 4:43:17 AM,1/2/2014 4:43:17 AM,1/2/2014 4:41:42 AM,1/9/2014 4:41:49 AM,926b9f40-b5af-e911-a83e-000d3a28968f,100000001,\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"z00019qi\",\"\",\"\",120,\"\",\"\",1/2/2014 8:41:42 AM,\"\",\"\",\"",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

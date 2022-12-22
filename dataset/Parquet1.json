@@ -1,0 +1,290 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Customer_Location.parquet",
+				"container": "parquet"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Cust_Number",
+				"type": "UTF8"
+			},
+			{
+				"name": "Location",
+				"type": "UTF8"
+			},
+			{
+				"name": "Profit_Center",
+				"type": "UTF8"
+			},
+			{
+				"name": "Addtnl_Credit",
+				"type": "UTF8"
+			},
+			{
+				"name": "Last_Review_date",
+				"type": "UTF8"
+			},
+			{
+				"name": "Next_Review_Date",
+				"type": "UTF8"
+			},
+			{
+				"name": "Terms_of_Payment",
+				"type": "UTF8"
+			},
+			{
+				"name": "Terms_of_Delivery",
+				"type": "UTF8"
+			},
+			{
+				"name": "Username",
+				"type": "UTF8"
+			},
+			{
+				"name": "Maint_Date",
+				"type": "UTF8"
+			},
+			{
+				"name": "CL_Code",
+				"type": "UTF8"
+			},
+			{
+				"name": "AR_Accounting",
+				"type": "UTF8"
+			},
+			{
+				"name": "Cust_Language",
+				"type": "UTF8"
+			},
+			{
+				"name": "Status",
+				"type": "UTF8"
+			},
+			{
+				"name": "Type",
+				"type": "UTF8"
+			},
+			{
+				"name": "Group",
+				"type": "UTF8"
+			},
+			{
+				"name": "Overdue_Days",
+				"type": "UTF8"
+			},
+			{
+				"name": "Allowance_Amt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Order_Stop_Control",
+				"type": "UTF8"
+			},
+			{
+				"name": "Supplier",
+				"type": "UTF8"
+			},
+			{
+				"name": "Cust_Sub_Type",
+				"type": "UTF8"
+			},
+			{
+				"name": "Sales_Transport_Type",
+				"type": "UTF8"
+			},
+			{
+				"name": "Credit_Limit",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ins_Policy_Num",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ins_Effect_Date",
+				"type": "UTF8"
+			},
+			{
+				"name": "Ins_Exp_Date",
+				"type": "UTF8"
+			},
+			{
+				"name": "Direct_Debit_Flag",
+				"type": "UTF8"
+			},
+			{
+				"name": "CO_OP_Switch",
+				"type": "UTF8"
+			},
+			{
+				"name": "CO_OP_Cust_Num",
+				"type": "UTF8"
+			},
+			{
+				"name": "Green_Dot_Credit_Switch",
+				"type": "UTF8"
+			},
+			{
+				"name": "LOC_2",
+				"type": "UTF8"
+			},
+			{
+				"name": "Cust_Abrev_Name",
+				"type": "UTF8"
+			},
+			{
+				"name": "VAT_Exempt_Flag",
+				"type": "UTF8"
+			},
+			{
+				"name": "Stat_Country",
+				"type": "UTF8"
+			},
+			{
+				"name": "Stat_State",
+				"type": "UTF8"
+			},
+			{
+				"name": "Stat_Town",
+				"type": "UTF8"
+			},
+			{
+				"name": "Stat_Village",
+				"type": "UTF8"
+			},
+			{
+				"name": "Oil_Tax_Override_Code",
+				"type": "UTF8"
+			},
+			{
+				"name": "DD_tran_Type",
+				"type": "UTF8"
+			},
+			{
+				"name": "Clean",
+				"type": "UTF8"
+			},
+			{
+				"name": "Samples",
+				"type": "UTF8"
+			},
+			{
+				"name": "Salesman_Num",
+				"type": "UTF8"
+			},
+			{
+				"name": "Sale_Region",
+				"type": "UTF8"
+			},
+			{
+				"name": "Cust_Area_Code",
+				"type": "UTF8"
+			},
+			{
+				"name": "Insured_Risk_Limit",
+				"type": "UTF8"
+			},
+			{
+				"name": "Euro_Switch",
+				"type": "UTF8"
+			},
+			{
+				"name": "Contact_Phone",
+				"type": "UTF8"
+			},
+			{
+				"name": "Contact_Name",
+				"type": "UTF8"
+			},
+			{
+				"name": "Contact_Name_2",
+				"type": "UTF8"
+			},
+			{
+				"name": "Contact_Name_3",
+				"type": "UTF8"
+			},
+			{
+				"name": "Contact_Fax",
+				"type": "UTF8"
+			},
+			{
+				"name": "Contact_Fax_Ext",
+				"type": "UTF8"
+			},
+			{
+				"name": "IDT_Override",
+				"type": "UTF8"
+			},
+			{
+				"name": "PRT_Reminder",
+				"type": "UTF8"
+			},
+			{
+				"name": "Remind_Lang_SW",
+				"type": "UTF8"
+			},
+			{
+				"name": "Book_Date",
+				"type": "UTF8"
+			},
+			{
+				"name": "Cycle_Group_Code",
+				"type": "UTF8"
+			},
+			{
+				"name": "Broker_Flag",
+				"type": "UTF8"
+			},
+			{
+				"name": "EDI_Invoicing_Sw",
+				"type": "UTF8"
+			},
+			{
+				"name": "Outsort_Code",
+				"type": "UTF8"
+			},
+			{
+				"name": "Adcred_Eff_Date",
+				"type": "UTF8"
+			},
+			{
+				"name": "Adcred_End_Date",
+				"type": "UTF8"
+			},
+			{
+				"name": "Insur_Cust_Vend",
+				"type": "UTF8"
+			},
+			{
+				"name": "VAT_Retention_Sw",
+				"type": "UTF8"
+			},
+			{
+				"name": "EDI_Sales_Inv_Sw",
+				"type": "UTF8"
+			},
+			{
+				"name": "Print_Driver",
+				"type": "UTF8"
+			},
+			{
+				"name": "OB10_Flag",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

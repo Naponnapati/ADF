@@ -1,0 +1,217 @@
+{
+	"name": "Avro4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Avro",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "prd-raw-bge-oracleccb-ci-pay-tndr+0+0024862085+0024862086.avro",
+				"container": "jiteshrepro"
+			}
+		},
+		"schema": {
+			"type": "record",
+			"name": "CISADM.CI_PAY_TNDR",
+			"fields": [
+				{
+					"name": "table",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "op_type",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "op_ts",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "current_ts",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "pos",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "tokens",
+					"type": [
+						"null",
+						{
+							"type": "map",
+							"values": "string"
+						}
+					]
+				},
+				{
+					"name": "PAY_TENDER_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "CURRENCY_CD",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "PAYOR_ACCT_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "TENDER_TYPE_CD",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "PAY_EVENT_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "TNDR_CTL_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "IN_TNDR_CTL_BAL_SW",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "TENDER_AMT",
+					"type": [
+						"null",
+						"double"
+					]
+				},
+				{
+					"name": "CHECK_NBR",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "TNDR_STATUS_FLG",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "CAN_RSN_CD",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "ADJ_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "CUST_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "MICR_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "NAME1",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "EXT_REFERENCE_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "VERSION",
+					"type": [
+						"null",
+						"long"
+					]
+				},
+				{
+					"name": "ALT_CURRENCY_CD",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "ALT_TENDER_AMT",
+					"type": [
+						"null",
+						"double"
+					]
+				},
+				{
+					"name": "ENCR_MICR_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				},
+				{
+					"name": "HASH_MICR_ID",
+					"type": [
+						"null",
+						"string"
+					]
+				}
+			]
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,364 @@
+{
+	"name": "Jitesh_repro",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AvroSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "table",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 1
+								}
+							},
+							{
+								"source": {
+									"name": "op_type",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 2
+								}
+							},
+							{
+								"source": {
+									"name": "op_ts",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 3
+								}
+							},
+							{
+								"source": {
+									"name": "current_ts",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 4
+								}
+							},
+							{
+								"source": {
+									"name": "pos",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 5
+								}
+							},
+							{
+								"source": {
+									"name": "tokens",
+									"physicalType": "map"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 6
+								}
+							},
+							{
+								"source": {
+									"name": "PAY_TENDER_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 7
+								}
+							},
+							{
+								"source": {
+									"name": "CURRENCY_CD",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 8
+								}
+							},
+							{
+								"source": {
+									"name": "PAYOR_ACCT_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 9
+								}
+							},
+							{
+								"source": {
+									"name": "TENDER_TYPE_CD",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 10
+								}
+							},
+							{
+								"source": {
+									"name": "PAY_EVENT_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 11
+								}
+							},
+							{
+								"source": {
+									"name": "TNDR_CTL_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 12
+								}
+							},
+							{
+								"source": {
+									"name": "IN_TNDR_CTL_BAL_SW",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 13
+								}
+							},
+							{
+								"source": {
+									"name": "TENDER_AMT",
+									"physicalType": "null | double"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 14
+								}
+							},
+							{
+								"source": {
+									"name": "CHECK_NBR",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 15
+								}
+							},
+							{
+								"source": {
+									"name": "TNDR_STATUS_FLG",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 16
+								}
+							},
+							{
+								"source": {
+									"name": "CAN_RSN_CD",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 17
+								}
+							},
+							{
+								"source": {
+									"name": "ADJ_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 18
+								}
+							},
+							{
+								"source": {
+									"name": "CUST_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 19
+								}
+							},
+							{
+								"source": {
+									"name": "MICR_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 20
+								}
+							},
+							{
+								"source": {
+									"name": "NAME1",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 21
+								}
+							},
+							{
+								"source": {
+									"name": "EXT_REFERENCE_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 22
+								}
+							},
+							{
+								"source": {
+									"name": "VERSION",
+									"physicalType": "null | long"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 23
+								}
+							},
+							{
+								"source": {
+									"name": "ALT_CURRENCY_CD",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 24
+								}
+							},
+							{
+								"source": {
+									"name": "ALT_TENDER_AMT",
+									"physicalType": "null | double"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 25
+								}
+							},
+							{
+								"source": {
+									"name": "ENCR_MICR_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 26
+								}
+							},
+							{
+								"source": {
+									"name": "HASH_MICR_ID",
+									"physicalType": "null | string"
+								},
+								"sink": {
+									"type": "String",
+									"physicalType": "String",
+									"ordinal": 27
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Avro6",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DelimitedText19",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-09-23T07:47:47Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

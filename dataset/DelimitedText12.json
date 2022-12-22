@@ -1,0 +1,702 @@
+{
+	"name": "DelimitedText12",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "nikhitha"
+			},
+			"columnDelimiter": "|",
+			"rowDelimiter": "\r",
+			"compressionCodec": "ZipDeflate",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "INTERNAL_SHIPMENT_NUM",
+				"type": "String"
+			},
+			{
+				"name": "warehouse",
+				"type": "String"
+			},
+			{
+				"name": "SHIPPING_LOAD_NUM",
+				"type": "String"
+			},
+			{
+				"name": "SHIPMENT_ID",
+				"type": "String"
+			},
+			{
+				"name": "LAUNCH_STEP",
+				"type": "String"
+			},
+			{
+				"name": "TRAILING_STS",
+				"type": "String"
+			},
+			{
+				"name": "TRAILING_STS_DATE",
+				"type": "String"
+			},
+			{
+				"name": "TRAILING_STS_FAILED",
+				"type": "String"
+			},
+			{
+				"name": "ORDER_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "CONSOLIDATED",
+				"type": "String"
+			},
+			{
+				"name": "LEADING_STS",
+				"type": "String"
+			},
+			{
+				"name": "LEADING_STS_DATE",
+				"type": "String"
+			},
+			{
+				"name": "CARRIER",
+				"type": "String"
+			},
+			{
+				"name": "LEADING_STS_FAILED",
+				"type": "String"
+			},
+			{
+				"name": "COMPANY",
+				"type": "String"
+			},
+			{
+				"name": "CARRIER_SERVICE",
+				"type": "String"
+			},
+			{
+				"name": "CARRIER_GROUP",
+				"type": "String"
+			},
+			{
+				"name": "CARRIER_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_TERMS",
+				"type": "String"
+			},
+			{
+				"name": "LIABILITY_TERMS",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO",
+				"type": "String"
+			},
+			{
+				"name": "ROUTE",
+				"type": "String"
+			},
+			{
+				"name": "STOP",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_ADDRESS1",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_NAME",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_ADDRESS2",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_ADDRESS3",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_CITY",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_STATE",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_COUNTRY",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_POSTAL_CODE",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_PHONE_NUM",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_FAX_NUM",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_ADDRESS1",
+				"type": "String"
+			},
+			{
+				"name": "LAUNCH_NUM",
+				"type": "String"
+			},
+			{
+				"name": "WEIGHT_UM",
+				"type": "String"
+			},
+			{
+				"name": "VOLUME_UM",
+				"type": "String"
+			},
+			{
+				"name": "ROUTING_CODE",
+				"type": "String"
+			},
+			{
+				"name": "SINGLE_ITEM_CARTONS",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF1",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF2",
+				"type": "String"
+			},
+			{
+				"name": "PRIORITY",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF3",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF4",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF5",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF6",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF7",
+				"type": "String"
+			},
+			{
+				"name": "MANUALLY_ENTERED",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF8",
+				"type": "String"
+			},
+			{
+				"name": "USER_STAMP",
+				"type": "String"
+			},
+			{
+				"name": "PROCESS_STAMP",
+				"type": "String"
+			},
+			{
+				"name": "DATE_TIME_STAMP",
+				"type": "String"
+			},
+			{
+				"name": "BOL_NUM_ALPHA",
+				"type": "String"
+			},
+			{
+				"name": "PRO_NUM_ALPHA",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_ADDRESS3",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_ADDRESS2",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_ATTENTION_TO",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CITY",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_STATE",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_COUNTRY",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_POSTAL_CODE",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_PHONE_NUM",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_FAX_NUM",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_EMAIL_ADDRESS",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_NAME",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_ATTENTION_TO",
+				"type": "String"
+			},
+			{
+				"name": "SHIP_TO_EMAIL_ADDRESS",
+				"type": "String"
+			},
+			{
+				"name": "REQUESTED_DELIVERY_DATE",
+				"type": "String"
+			},
+			{
+				"name": "REQUESTED_DELIVERY_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "SCHEDULED_SHIP_DATE",
+				"type": "String"
+			},
+			{
+				"name": "PLANNED_SHIP_DATE",
+				"type": "String"
+			},
+			{
+				"name": "ACTUAL_SHIP_DATE_TIME",
+				"type": "String"
+			},
+			{
+				"name": "PLANNED_DELIVERY_DATE_TIME",
+				"type": "String"
+			},
+			{
+				"name": "ACTUAL_DELIVERY_DATE_TIME",
+				"type": "String"
+			},
+			{
+				"name": "QUANTITY_UM",
+				"type": "String"
+			},
+			{
+				"name": "TOTAL_FREIGHT_CHARGE",
+				"type": "String"
+			},
+			{
+				"name": "BASE_FREIGHT_CHARGE",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_DISCOUNT",
+				"type": "String"
+			},
+			{
+				"name": "ACCESSORIAL_CHARGE",
+				"type": "String"
+			},
+			{
+				"name": "CONSOLIDATION_ALLOWED",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_CONSIGNEE",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_NAME",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_ADDRESS1",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_ADDRESS2",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_ADDRESS3",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_ATTENTION_TO",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_CITY",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_STATE",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_COUNTRY",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_POSTAL_CODE",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_PHONE_NUM",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_FAX_NUM",
+				"type": "String"
+			},
+			{
+				"name": "INTERMEDIATE_EMAIL_ADDRESS",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_NAME",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_ADDRESS1",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_ADDRESS2",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_ADDRESS3",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_ATTENTION_TO",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_CITY",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_STATE",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_COUNTRY",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_POSTAL_CODE",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_PHONE_NUM",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_FAX_NUM",
+				"type": "String"
+			},
+			{
+				"name": "FREIGHT_BILL_TO_EMAIL_ADDRESS",
+				"type": "String"
+			},
+			{
+				"name": "ERP_ORDER",
+				"type": "String"
+			},
+			{
+				"name": "INTERNAL_ORDER_NUM",
+				"type": "String"
+			},
+			{
+				"name": "EXPORT_TAX_ID",
+				"type": "String"
+			},
+			{
+				"name": "PARTIES",
+				"type": "String"
+			},
+			{
+				"name": "LOADING_PIER",
+				"type": "String"
+			},
+			{
+				"name": "TRANSPORTATION_MODE",
+				"type": "String"
+			},
+			{
+				"name": "EXPORT_PORT",
+				"type": "String"
+			},
+			{
+				"name": "UNLOADING_PORT",
+				"type": "String"
+			},
+			{
+				"name": "CONTAINERIZED",
+				"type": "String"
+			},
+			{
+				"name": "FTZ",
+				"type": "String"
+			},
+			{
+				"name": "VALIDATED_LICENSE",
+				"type": "String"
+			},
+			{
+				"name": "LICENSE_EXP_DATE",
+				"type": "String"
+			},
+			{
+				"name": "ECCN",
+				"type": "String"
+			},
+			{
+				"name": "AUTHORIZED_EMPL_NAME",
+				"type": "String"
+			},
+			{
+				"name": "AUTHORIZED_EMPL_TITLE",
+				"type": "String"
+			},
+			{
+				"name": "UPLOAD_INTERFACE_BATCH",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_RESIDENTIAL_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "SHIPTO_RESIDENTIAL_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "REJECTION_NOTE",
+				"type": "String"
+			},
+			{
+				"name": "INTERFACE_RECORD_ID",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY1",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY2",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY3",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY4",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY5",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY6",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY7",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY8",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY9",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CATEGORY10",
+				"type": "String"
+			},
+			{
+				"name": "CONSOLIDATION_DOCK_LOC_AREA",
+				"type": "String"
+			},
+			{
+				"name": "CONSOLIDATION_DOCK_LOC_POS",
+				"type": "String"
+			},
+			{
+				"name": "PROCESS_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "CREATION_PROCESS_STAMP",
+				"type": "String"
+			},
+			{
+				"name": "CREATION_DATE_TIME_STAMP",
+				"type": "String"
+			},
+			{
+				"name": "IMMEDIATE_NEEDS_NOTE",
+				"type": "String"
+			},
+			{
+				"name": "ALLOCATE_COMPLETE",
+				"type": "String"
+			},
+			{
+				"name": "ALTERNATE_EMAIL_ADDRESS",
+				"type": "String"
+			},
+			{
+				"name": "STOP_SEQUENCE",
+				"type": "String"
+			},
+			{
+				"name": "INTERNAL_CARRIER_NUM",
+				"type": "String"
+			},
+			{
+				"name": "STORE_DISTRIBUTION",
+				"type": "String"
+			},
+			{
+				"name": "TOTAL_LBR_ESTIMATE",
+				"type": "String"
+			},
+			{
+				"name": "WEIGHT_ENTERED",
+				"type": "String"
+			},
+			{
+				"name": "VOLUME_ENTERED",
+				"type": "String"
+			},
+			{
+				"name": "VALUE_ENTERED",
+				"type": "String"
+			},
+			{
+				"name": "LOCKED",
+				"type": "String"
+			},
+			{
+				"name": "SHIPPER_CODE",
+				"type": "String"
+			},
+			{
+				"name": "IN_DELETION",
+				"type": "String"
+			},
+			{
+				"name": "INVENTORY_LOAD_CONFIRMED",
+				"type": "String"
+			},
+			{
+				"name": "LAST_STATUS_UPLOADED",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF9",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF10",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF11",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF12",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF13",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF14",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF15",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF16",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF17_DATE_TIME",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF18_DATE_TIME",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF19_DATE_TIME",
+				"type": "String"
+			},
+			{
+				"name": "USER_DEF20_DATE_TIME",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

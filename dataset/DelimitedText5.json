@@ -1,0 +1,214 @@
+{
+	"name": "DelimitedText5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "77ff86b2-baf4-1183-4d6e-8994b5d1f541new.csv",
+				"folderPath": "test/pbi/file/reports",
+				"container": "vaishali"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Alarm durch defekte Tür",
+				"type": "String"
+			},
+			{
+				"name": "Prop_1",
+				"type": "String"
+			},
+			{
+				"name": "FALSE",
+				"type": "String"
+			},
+			{
+				"name": "Prop_3",
+				"type": "String"
+			},
+			{
+				"name": "4511504697",
+				"type": "String"
+			},
+			{
+				"name": "TRUE",
+				"type": "String"
+			},
+			{
+				"name": "9/22/2021 15:20",
+				"type": "String"
+			},
+			{
+				"name": "Prop_7",
+				"type": "String"
+			},
+			{
+				"name": "Caller Name: xxxxxxxxx  Caller Phone: xxxxxxxxxx Caller E-mail: ",
+				"type": "String"
+			},
+			{
+				"name": "Prop_9",
+				"type": "String"
+			},
+			{
+				"name": "account",
+				"type": "String"
+			},
+			{
+				"name": "300891224",
+				"type": "String"
+			},
+			{
+				"name": "000300891224_MP1-100",
+				"type": "String"
+			},
+			{
+				"name": "2",
+				"type": "String"
+			},
+			{
+				"name": "100000000",
+				"type": "String"
+			},
+			{
+				"name": "3f37841a-50cc-4ec1-a80e-6d3896f2ad95",
+				"type": "String"
+			},
+			{
+				"name": "4fadd60e-77ef-e911-a812-000d3a2d5a33",
+				"type": "String"
+			},
+			{
+				"name": "100000004",
+				"type": "String"
+			},
+			{
+				"name": "30",
+				"type": "String"
+			},
+			{
+				"name": "1/2/2014 4:4319",
+				"type": "String"
+			},
+			{
+				"name": "1/2/2014 4:4320",
+				"type": "String"
+			},
+			{
+				"name": "1/2/2014 4:41",
+				"type": "String"
+			},
+			{
+				"name": "1/9/2014 4:41",
+				"type": "String"
+			},
+			{
+				"name": "926b9f40-b5af-e911-a83e-000d3a28968f",
+				"type": "String"
+			},
+			{
+				"name": "100000001",
+				"type": "String"
+			},
+			{
+				"name": "Prop_25",
+				"type": "String"
+			},
+			{
+				"name": "Prop_26",
+				"type": "String"
+			},
+			{
+				"name": "Prop_27",
+				"type": "String"
+			},
+			{
+				"name": "Prop_28",
+				"type": "String"
+			},
+			{
+				"name": "Prop_29",
+				"type": "String"
+			},
+			{
+				"name": "Prop_30",
+				"type": "String"
+			},
+			{
+				"name": "Prop_31",
+				"type": "String"
+			},
+			{
+				"name": "Prop_32",
+				"type": "String"
+			},
+			{
+				"name": "Prop_33",
+				"type": "String"
+			},
+			{
+				"name": "Prop_34",
+				"type": "String"
+			},
+			{
+				"name": "z00019qi",
+				"type": "String"
+			},
+			{
+				"name": "Prop_36",
+				"type": "String"
+			},
+			{
+				"name": "Prop_37",
+				"type": "String"
+			},
+			{
+				"name": "120",
+				"type": "String"
+			},
+			{
+				"name": "Prop_39",
+				"type": "String"
+			},
+			{
+				"name": "Prop_40",
+				"type": "String"
+			},
+			{
+				"name": "1/2/2014 8:41",
+				"type": "String"
+			},
+			{
+				"name": "Prop_42",
+				"type": "String"
+			},
+			{
+				"name": "Prop_43",
+				"type": "String"
+			},
+			{
+				"name": "\n02.01.2014 05:42:46 Sxxxxxx xxxxxx (xxxxxxxxx) Tel. +xxxxxxxx x\nTechniker zwischen 7 Uhr und 9 Uhr benötigt",
+				"type": "String"
+			},
+			{
+				"name": "DynamicsOperationFailed",
+				"type": "String"
+			},
+			{
+				"name": "Dynamics operation failed with error code: -2147204080, error message: You should specify a contact or account..",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

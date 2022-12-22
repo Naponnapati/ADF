@@ -1,0 +1,52 @@
+{
+	"name": "Avro3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Avro",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "jiteshrepro"
+			}
+		},
+		"schema": {
+			"type": "record",
+			"name": "HybridDelivery.ClientLibraryJob",
+			"fields": [
+				{
+					"name": "Units",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "name",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "price",
+					"type": [
+						"string",
+						"null"
+					]
+				},
+				{
+					"name": "value",
+					"type": [
+						"string",
+						"null"
+					]
+				}
+			]
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

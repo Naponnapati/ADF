@@ -1,0 +1,7 @@
+{
+	"name": "AzureSqlDatabase322",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/9af4af54-5433-4575-8277-3bf468ea9af8/resourceGroups/Nagesh_rg/providers/Microsoft.Sql/servers/nagesh-sqlserver",
+		"groupId": "sqlServer"
+	}
+}

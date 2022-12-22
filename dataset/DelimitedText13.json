@@ -1,0 +1,40 @@
+{
+	"name": "DelimitedText13",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "7/2/2021",
+				"type": "String"
+			},
+			{
+				"name": "Friday",
+				"type": "String"
+			},
+			{
+				"name": "Present",
+				"type": "String"
+			},
+			{
+				"name": "9:30 am to 6:30 pm ",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

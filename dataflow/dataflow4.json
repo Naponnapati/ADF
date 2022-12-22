@@ -1,0 +1,32 @@
+{
+	"name": "dataflow4",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DelimitedText1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable2",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "Transformcolumns"
+				}
+			],
+			"script": "source(output(\n\t\tCust_Number as string,\n\t\tLocation as string,\n\t\tProfit_Center as string,\n\t\tAddtnl_Credit as string,\n\t\tLast_Review_date as string,\n\t\tNext_Review_Date as string,\n\t\tTerms_of_Payment as string,\n\t\tTerms_of_Delivery as string,\n\t\tUsername as string,\n\t\tMaint_Date as string,\n\t\tCL_Code as string,\n\t\tAR_Accounting as string,\n\t\tCust_Language as string,\n\t\tStatus as string,\n\t\tType as string,\n\t\tGroup as string,\n\t\tOverdue_Days as string,\n\t\tAllowance_Amt as string,\n\t\tOrder_Stop_Control as string,\n\t\tSupplier as string,\n\t\tCust_Sub_Type as string,\n\t\tSales_Transport_Type as string,\n\t\tCredit_Limit as string,\n\t\tIns_Policy_Num as string,\n\t\tIns_Effect_Date as string,\n\t\tIns_Exp_Date as string,\n\t\tDirect_Debit_Flag as string,\n\t\tCO_OP_Switch as string,\n\t\tCO_OP_Cust_Num as string,\n\t\tGreen_Dot_Credit_Switch as string,\n\t\tLOC_2 as string,\n\t\tCust_Abrev_Name as string,\n\t\tVAT_Exempt_Flag as string,\n\t\tStat_Country as string,\n\t\tStat_State as string,\n\t\tStat_Town as string,\n\t\tStat_Village as string,\n\t\tOil_Tax_Override_Code as string,\n\t\tDD_tran_Type as string,\n\t\tClean as string,\n\t\tSamples as string,\n\t\tSalesman_Num as string,\n\t\tSale_Region as string,\n\t\tCust_Area_Code as string,\n\t\tInsured_Risk_Limit as string,\n\t\tEuro_Switch as string,\n\t\tContact_Phone as string,\n\t\tContact_Name as string,\n\t\tContact_Name_2 as string,\n\t\tContact_Name_3 as string,\n\t\tContact_Fax as string,\n\t\tContact_Fax_Ext as string,\n\t\tIDT_Override as string,\n\t\tPRT_Reminder as string,\n\t\tRemind_Lang_SW as string,\n\t\tBook_Date as string,\n\t\tCycle_Group_Code as string,\n\t\tBroker_Flag as string,\n\t\tEDI_Invoicing_Sw as string,\n\t\tOutsort_Code as string,\n\t\tAdcred_Eff_Date as string,\n\t\tAdcred_End_Date as string,\n\t\tInsur_Cust_Vend as string,\n\t\tVAT_Retention_Sw as string,\n\t\tEDI_Sales_Inv_Sw as string,\n\t\tPrint_Driver as string,\n\t\tOB10_Flag as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source1\nsource1 select(mapColumn(\n\t\teach(match(/* All input columns */true()),\n\t\t\t/* Input name */$$ = $$)\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Transformcolumns\nTransformcolumns sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\tCust_Number as string,\n\t\tLocation as string,\n\t\tProfit_Center as string,\n\t\tAddtnl_Credit as decimal(12,2),\n\t\tLast_Review_date as timestamp,\n\t\tNext_Review_Date as timestamp,\n\t\tTerms_of_Payment as string,\n\t\tTerms_of_Delivery as string,\n\t\tUsername as string,\n\t\tMaint_Date as timestamp,\n\t\tCL_Code as string,\n\t\tAR_Accounting as string,\n\t\tCust_Language as string,\n\t\tStatus as string,\n\t\tType as string,\n\t\tGroup as string,\n\t\tOverdue_Days as string,\n\t\tAllowance_Amt as decimal(12,2),\n\t\tOrder_Stop_Control as string,\n\t\tSupplier as string,\n\t\tCust_Sub_Type as string,\n\t\tSales_Transport_Type as string,\n\t\tCredit_Limit as decimal(14,2),\n\t\tIns_Policy_Num as string,\n\t\tIns_Effect_Date as timestamp,\n\t\tIns_Exp_Date as timestamp,\n\t\tDirect_Debit_Flag as string,\n\t\tCO_OP_Switch as string,\n\t\tCO_OP_Cust_Num as string,\n\t\tGreen_Dot_Credit_Switch as string,\n\t\tLOC_2 as string,\n\t\tCust_Abrev_Name as string,\n\t\tVAT_Exempt_Flag as string,\n\t\tStat_Country as string,\n\t\tStat_State as string,\n\t\tStat_Town as string,\n\t\tStat_Village as string,\n\t\tOil_Tax_Override_Code as decimal(7,4),\n\t\tDD_tran_Type as string,\n\t\tClean as string,\n\t\tSamples as string,\n\t\tSalesman_Num as string,\n\t\tSale_Region as string,\n\t\tCust_Area_Code as string,\n\t\tInsured_Risk_Limit as decimal(12,2),\n\t\tEuro_Switch as string,\n\t\tContact_Phone as string,\n\t\tContact_Name as string,\n\t\tContact_Name_2 as string,\n\t\tContact_Name_3 as string,\n\t\tContact_Fax as string,\n\t\tContact_Fax_Ext as string,\n\t\tIDT_Override as string,\n\t\tPRT_Reminder as string,\n\t\tRemind_Lang_SW as string,\n\t\tBook_Date as timestamp,\n\t\tCycle_Group_Code as string,\n\t\tBroker_Flag as string,\n\t\tEDI_Invoicing_Sw as string,\n\t\tOutsort_Code as string,\n\t\tAdcred_Eff_Date as timestamp,\n\t\tAdcred_End_Date as timestamp,\n\t\tInsur_Cust_Vend as string,\n\t\tVAT_Retention_Sw as string,\n\t\tEDI_Sales_Inv_Sw as string,\n\t\tPrint_Driver as string,\n\t\tOB10_Flag as string,\n\t\tCreatedOnUTC as timestamp,\n\t\tCreatedBy as string,\n\t\t{__dl_processed_DT} as timestamp\n\t),\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\ttruncate:true,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> sink1"
+		}
+	}
+}

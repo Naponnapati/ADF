@@ -1,0 +1,28 @@
+{
+	"name": "DelimitedText6",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "parquet"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "\"Cust_Number\"|\"Location\"|\"Profit_Center\"|\"Addtnl_Credit\"|\"Last_Review_date\"|\"Next_Review_Date\"|\"Terms_of_Payment\"|\"Terms_of_Delivery\"|\"Username\"|\"Maint_Date\"|\"CL_Code\"|\"AR_Accounting\"|\"Cust_Language\"|\"Status\"|\"Type\"|\"Group\"|\"Overdue_Days\"|\"Allowance_Amt\"|\"Order_Stop_Control\"|\"Supplier\"|\"Cust_Sub_Type\"|\"Sales_Transport_Type\"|\"Credit_Limit\"|\"Ins_Policy_Num\"|\"Ins_Effect_Date\"|\"Ins_Exp_Date\"|\"Direct_Debit_Flag\"|\"CO_OP_Switch\"|\"CO_OP_Cust_Num\"|\"Green_Dot_Credit_Switch\"|\"LOC_2\"|\"Cust_Abrev_Name\"|\"VAT_Exempt_Flag\"|\"Stat_Country\"|\"Stat_State\"|\"Stat_Town\"|\"Stat_Village\"|\"Oil_Tax_Override_Code\"|\"DD_tran_Type\"|\"Clean\"|\"Samples\"|\"Salesman_Num\"|\"Sale_Region\"|\"Cust_Area_Code\"|\"Insured_Risk_Limit\"|\"Euro_Switch\"|\"Contact_Phone\"|\"Contact_Name\"|\"Contact_Name_2\"|\"Contact_Name_3\"|\"Contact_Fax\"|\"Contact_Fax_Ext\"|\"IDT_Override\"|\"PRT_Reminder\"|\"Remind_Lang_SW\"|\"Book_Date\"|\"Cycle_Group_Code\"|\"Broker_Flag\"|\"EDI_Invoicing_Sw\"|\"Outsort_Code\"|\"Adcred_Eff_Date\"|\"Adcred_End_Date\"|\"Insur_Cust_Vend\"|\"VAT_Retention_Sw\"|\"EDI_Sales_Inv_Sw\"|\"Print_Driver\"|\"OB10_Flag\"                                                                                                                                                                                                                                                                                               ",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,24 @@
+{
+	"name": "blobeventtrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "vaishali2",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/vaishali/blobs/test / pbi / file / reports",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/6b0a72ea-ca4d-488d-87f1-c5e515a2a7f4/resourceGroups/Nagesh_RG/providers/Microsoft.Storage/storageAccounts/nageshsa",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

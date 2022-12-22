@@ -1,0 +1,35 @@
+{
+	"name": "dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_json",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "Flatten1"
+				},
+				{
+					"name": "Parse1"
+				}
+			],
+			"script": "source(output(\n\t\tfirstName as string,\n\t\tlastName as string,\n\t\tgender as string,\n\t\tage as integer,\n\t\taddress as (streetAddress as string, city as string, state as string),\n\t\tphoneNumbers as (type as string, number as string)[]\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tdocumentForm: 'singleDocument') ~> source1\nParse1 foldDown(unroll(phoneNumbers, phoneNumbers),\n\tmapColumn(\n\t\tfirstName,\n\t\tlastName,\n\t\tgender,\n\t\tage,\n\t\taddress = address.streetAddress,\n\t\tphoneNumbers\n\t),\n\tskipDuplicateMapInputs: false,\n\tskipDuplicateMapOutputs: false) ~> Flatten1\nsource1 parse(address = address ? (streetaddress as string),\n\tformat: 'json',\n\tdocumentForm: 'arrayOfDocuments') ~> Parse1\nFlatten1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> sink1"
+		}
+	}
+}

@@ -1,0 +1,100 @@
+{
+	"name": "ds_Antoine",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Container": {
+				"type": "string"
+			},
+			"SubDirectory": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
+			},
+			"CompressionType": {
+				"type": "string"
+			},
+			"CompressionLevel": {
+				"type": "string"
+			},
+			"ColumnDelimiter": {
+				"type": "string"
+			},
+			"RowDelimiter": {
+				"type": "string"
+			},
+			"Encoding": {
+				"type": "string"
+			},
+			"EscapeCharacter": {
+				"type": "string"
+			},
+			"QuoteCharacter": {
+				"type": "string"
+			},
+			"FirstRowAsHeader": {
+				"type": "bool"
+			}
+		},
+		"folder": {
+			"name": "scm"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().SubDirectory",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().Container",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": {
+				"value": "@dataset().ColumnDelimiter",
+				"type": "Expression"
+			},
+			"rowDelimiter": {
+				"value": "@dataset().RowDelimiter",
+				"type": "Expression"
+			},
+			"compressionCodec": {
+				"value": "@dataset().CompressionType",
+				"type": "Expression"
+			},
+			"compressionLevel": {
+				"value": "@dataset().CompressionLevel",
+				"type": "Expression"
+			},
+			"encodingName": {
+				"value": "@dataset().Encoding",
+				"type": "Expression"
+			},
+			"escapeChar": {
+				"value": "@dataset().EscapeCharacter",
+				"type": "Expression"
+			},
+			"firstRowAsHeader": {
+				"value": "@dataset().FirstRowAsHeader",
+				"type": "Expression"
+			},
+			"quoteChar": {
+				"value": "@dataset().QuoteCharacter",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

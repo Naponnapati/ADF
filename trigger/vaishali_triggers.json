@@ -1,0 +1,28 @@
+{
+	"name": "vaishali_triggers",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "vaishali_triggers",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"Copyfolder": "@pipeline().parameters.Copyfolder",
+					"Copyfile": "@pipeline().parameters.Copyfile"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/adftutorial/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/6b0a72ea-ca4d-488d-87f1-c5e515a2a7f4/resourceGroups/Nagesh_RG/providers/Microsoft.Storage/storageAccounts/nageshsa",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

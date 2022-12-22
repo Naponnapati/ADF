@@ -1,0 +1,67 @@
+{
+	"name": "ds_Antoinejson",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Container": {
+				"type": "string"
+			},
+			"SubDirectory": {
+				"type": "string"
+			},
+			"FileName": {
+				"type": "string"
+			},
+			"CompressionType": {
+				"type": "string"
+			},
+			"Encoding": {
+				"type": "string"
+			},
+			"CompressionLevel": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "scm"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().SubDirectory",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().Container",
+					"type": "Expression"
+				}
+			},
+			"compression": {
+				"type": {
+					"value": "@dataset().CompressionType",
+					"type": "Expression"
+				},
+				"level": {
+					"value": "@dataset().CompressionLevel",
+					"type": "Expression"
+				}
+			},
+			"encodingName": {
+				"value": "@dataset().Encoding",
+				"type": "Expression"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

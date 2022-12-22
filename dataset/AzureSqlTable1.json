@@ -1,0 +1,59 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuresqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "country",
+				"type": "varchar"
+			},
+			{
+				"name": "country_code",
+				"type": "varchar"
+			},
+			{
+				"name": "year_week",
+				"type": "varchar"
+			},
+			{
+				"name": "new_cases",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "tests_done",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "population",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "testing_rate",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "positivity_rate",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "testing_date_source",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "testing"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

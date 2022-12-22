@@ -1,0 +1,28 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_blobcsvfiles",
+						"type": "DatasetReference"
+					},
+					"name": "source"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_azuresqldb",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> source\nsource sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tinput(\n\t\tcountry as string,\n\t\tcountry_code as string,\n\t\tcontinent as string,\n\t\tpopulation as long,\n\t\tindicator as string,\n\t\tdaily_count as long,\n\t\tDATE as date,\n\t\tRATE_14_DAY as string,\n\t\tSOURCE as string\n\t),\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tdateFormat:'MM.dd.yyyy',\n\ttimestampFormat:'MM/dd/yyyy HH:mm:ss',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> sink1"
+		}
+	}
+}

@@ -1,0 +1,293 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "customer_location_2021112219004033.csv",
+				"container": "parquet"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Cust_Number",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			},
+			{
+				"name": "Profit_Center",
+				"type": "String"
+			},
+			{
+				"name": "Addtnl_Credit",
+				"type": "String"
+			},
+			{
+				"name": "Last_Review_date",
+				"type": "String"
+			},
+			{
+				"name": "Next_Review_Date",
+				"type": "String"
+			},
+			{
+				"name": "Terms_of_Payment",
+				"type": "String"
+			},
+			{
+				"name": "Terms_of_Delivery",
+				"type": "String"
+			},
+			{
+				"name": "Username",
+				"type": "String"
+			},
+			{
+				"name": "Maint_Date",
+				"type": "String"
+			},
+			{
+				"name": "CL_Code",
+				"type": "String"
+			},
+			{
+				"name": "AR_Accounting",
+				"type": "String"
+			},
+			{
+				"name": "Cust_Language",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "Type",
+				"type": "String"
+			},
+			{
+				"name": "Group",
+				"type": "String"
+			},
+			{
+				"name": "Overdue_Days",
+				"type": "String"
+			},
+			{
+				"name": "Allowance_Amt",
+				"type": "String"
+			},
+			{
+				"name": "Order_Stop_Control",
+				"type": "String"
+			},
+			{
+				"name": "Supplier",
+				"type": "String"
+			},
+			{
+				"name": "Cust_Sub_Type",
+				"type": "String"
+			},
+			{
+				"name": "Sales_Transport_Type",
+				"type": "String"
+			},
+			{
+				"name": "Credit_Limit",
+				"type": "String"
+			},
+			{
+				"name": "Ins_Policy_Num",
+				"type": "String"
+			},
+			{
+				"name": "Ins_Effect_Date",
+				"type": "String"
+			},
+			{
+				"name": "Ins_Exp_Date",
+				"type": "String"
+			},
+			{
+				"name": "Direct_Debit_Flag",
+				"type": "String"
+			},
+			{
+				"name": "CO_OP_Switch",
+				"type": "String"
+			},
+			{
+				"name": "CO_OP_Cust_Num",
+				"type": "String"
+			},
+			{
+				"name": "Green_Dot_Credit_Switch",
+				"type": "String"
+			},
+			{
+				"name": "LOC_2",
+				"type": "String"
+			},
+			{
+				"name": "Cust_Abrev_Name",
+				"type": "String"
+			},
+			{
+				"name": "VAT_Exempt_Flag",
+				"type": "String"
+			},
+			{
+				"name": "Stat_Country",
+				"type": "String"
+			},
+			{
+				"name": "Stat_State",
+				"type": "String"
+			},
+			{
+				"name": "Stat_Town",
+				"type": "String"
+			},
+			{
+				"name": "Stat_Village",
+				"type": "String"
+			},
+			{
+				"name": "Oil_Tax_Override_Code",
+				"type": "String"
+			},
+			{
+				"name": "DD_tran_Type",
+				"type": "String"
+			},
+			{
+				"name": "Clean",
+				"type": "String"
+			},
+			{
+				"name": "Samples",
+				"type": "String"
+			},
+			{
+				"name": "Salesman_Num",
+				"type": "String"
+			},
+			{
+				"name": "Sale_Region",
+				"type": "String"
+			},
+			{
+				"name": "Cust_Area_Code",
+				"type": "String"
+			},
+			{
+				"name": "Insured_Risk_Limit",
+				"type": "String"
+			},
+			{
+				"name": "Euro_Switch",
+				"type": "String"
+			},
+			{
+				"name": "Contact_Phone",
+				"type": "String"
+			},
+			{
+				"name": "Contact_Name",
+				"type": "String"
+			},
+			{
+				"name": "Contact_Name_2",
+				"type": "String"
+			},
+			{
+				"name": "Contact_Name_3",
+				"type": "String"
+			},
+			{
+				"name": "Contact_Fax",
+				"type": "String"
+			},
+			{
+				"name": "Contact_Fax_Ext",
+				"type": "String"
+			},
+			{
+				"name": "IDT_Override",
+				"type": "String"
+			},
+			{
+				"name": "PRT_Reminder",
+				"type": "String"
+			},
+			{
+				"name": "Remind_Lang_SW",
+				"type": "String"
+			},
+			{
+				"name": "Book_Date",
+				"type": "String"
+			},
+			{
+				"name": "Cycle_Group_Code",
+				"type": "String"
+			},
+			{
+				"name": "Broker_Flag",
+				"type": "String"
+			},
+			{
+				"name": "EDI_Invoicing_Sw",
+				"type": "String"
+			},
+			{
+				"name": "Outsort_Code",
+				"type": "String"
+			},
+			{
+				"name": "Adcred_Eff_Date",
+				"type": "String"
+			},
+			{
+				"name": "Adcred_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Insur_Cust_Vend",
+				"type": "String"
+			},
+			{
+				"name": "VAT_Retention_Sw",
+				"type": "String"
+			},
+			{
+				"name": "EDI_Sales_Inv_Sw",
+				"type": "String"
+			},
+			{
+				"name": "Print_Driver",
+				"type": "String"
+			},
+			{
+				"name": "OB10_Flag",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

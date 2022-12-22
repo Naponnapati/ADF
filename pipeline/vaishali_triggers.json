@@ -1,0 +1,88 @@
+{
+	"name": "vaishali_triggers",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimitedText2",
+						"type": "DatasetReference",
+						"parameters": {
+							"Copyfolder": {
+								"value": "@pipeline().parameters.Copyfolder",
+								"type": "Expression"
+							},
+							"Copyfile": {
+								"value": "@pipeline().parameters.Copyfile",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DelimitedText3",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"parameters": {
+			"Copyfolder": {
+				"type": "string",
+				"defaultValue": "@triggerBody().folderPath"
+			},
+			"Copyfile": {
+				"type": "string",
+				"defaultValue": "@triggerBody().fileName"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-11-24T04:56:04Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

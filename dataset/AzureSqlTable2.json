@@ -1,0 +1,326 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuresqldb",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Cust_Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Location",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Profit_Center",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Addtnl_Credit",
+				"type": "decimal",
+				"precision": 12,
+				"scale": 2
+			},
+			{
+				"name": "Last_Review_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Next_Review_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Terms_of_Payment",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Terms_of_Delivery",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Username",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Maint_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CL_Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AR_Accounting",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cust_Language",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Group",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Overdue_Days",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Allowance_Amt",
+				"type": "decimal",
+				"precision": 12,
+				"scale": 2
+			},
+			{
+				"name": "Order_Stop_Control",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Supplier",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cust_Sub_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Sales_Transport_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Credit_Limit",
+				"type": "decimal",
+				"precision": 14,
+				"scale": 2
+			},
+			{
+				"name": "Ins_Policy_Num",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Ins_Effect_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Ins_Exp_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Direct_Debit_Flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CO_OP_Switch",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CO_OP_Cust_Num",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Green_Dot_Credit_Switch",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LOC_2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cust_Abrev_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VAT_Exempt_Flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Stat_Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Stat_State",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Stat_Town",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Stat_Village",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Oil_Tax_Override_Code",
+				"type": "decimal",
+				"precision": 7,
+				"scale": 4
+			},
+			{
+				"name": "DD_tran_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Clean",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Samples",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Salesman_Num",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Sale_Region",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cust_Area_Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Insured_Risk_Limit",
+				"type": "decimal",
+				"precision": 12,
+				"scale": 2
+			},
+			{
+				"name": "Euro_Switch",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contact_Phone",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contact_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contact_Name_2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contact_Name_3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contact_Fax",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contact_Fax_Ext",
+				"type": "nvarchar"
+			},
+			{
+				"name": "IDT_Override",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRT_Reminder",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Remind_Lang_SW",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Book_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Cycle_Group_Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Broker_Flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EDI_Invoicing_Sw",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Outsort_Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Adcred_Eff_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Adcred_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Insur_Cust_Vend",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VAT_Retention_Sw",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EDI_Sales_Inv_Sw",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Print_Driver",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OB10_Flag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CreatedOnUTC",
+				"type": "datetime2",
+				"scale": 3
+			},
+			{
+				"name": "CreatedBy",
+				"type": "nvarchar"
+			},
+			{
+				"name": "__dl_processed_DT",
+				"type": "datetime2",
+				"scale": 6
+			}
+		],
+		"typeProperties": {
+			"schema": "nageshsqldb",
+			"table": "Customer_Location"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
